@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang ="en"> 
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Temperaturas</title>
+    <style>
+        body {
+            font-family: Airal, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Conversor de Temperaturas</h1>
+    <input type= "number" id="tempCelsius" placeholder="Digite a temperatura em Celsius">
+    <button onclick="converterTemperatura()">Converter</button> 
+    <div id="output"></div>
+
+    <script>
+        function converterTemperatura() {
+    var tempCelsius = parseFloat(document.getElementById("tempCelsius").value);
+    var tempKelvin = tempCelsius + 273.15;
+    var tempFahrenheit = (tempCelsius * 9/5) +32; 
+
+    document.getElementById("output").innerHTML = ` 
+    <p>Temperatura em Kelvin: ${tempKelvin} °K</p>
+    <p>Temperatura em Fahrenheit: ${tempFahrenheit} °F</p>
+
+    `;
+}
+ </script>
+</body>
+</html>
