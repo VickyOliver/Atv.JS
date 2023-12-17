@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Desconto</title>
+</head>
+<body>
+
+
+    <div style="text-align:center"> 
+        <h1>Calcular Desconto</h1>
+        <button onclick="calcularDesconto()">Desconto de 10%</button>  
+    </div> <br /> 
+    <div style="text-align:center" id="resultado"></div> 
+    
+
+    
+
+    <script>
+        function calcularDesconto(){
+            var produto = prompt("Qual é o produto que está sendo comprado?");
+          
+            var preco = parseFloat(prompt("Qual é o preço do produto?")); 
+
+            if (!isNaN(preco)) {
+                var desconto = preco * 0.1;
+                var precoComDesconto = preco - desconto;
+
+                var resultadoHTML = "Voce comprou: " + produto + "<br>";
+                resultadoHTML += "Preço original: R$" + preco.toFixed(2) + "<br>";
+                resultadoHTML += "Desconto (10%): R$" + desconto.toFixed(2) + "<br>";
+                resultadoHTML += "Preço com desconto: R$" + precoComDesconto.toFixed(2);
+
+                document.getElementById("resultado").innerHTML = resultadoHTML; 
+
+            
+            } else {
+                alert("insira um preço válido")
+            }
+
+        } 
+
+    </script>
+</body>
+</html>
