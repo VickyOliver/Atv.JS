@@ -1,2 +1,2 @@
-# Repositório criado para postar as questões de funpro 
+# Repositório criado para postar questões de funpro 💻
 
