@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reajustar Salário</title>
+</head>
+<body>
+
+    <div style="text-align:center"> 
+        <h1>Reajuste Salárial</h1>
+        <button onclick="calcularAumento()">Reajuste o salário</button>  
+    </div> <br /> 
+    <div style="text-align:center" id="resultado"></div> 
+    
+
+    <script>
+        function calcularAumento(){
+            var funcionario = prompt("Qual é o nome do funcionário:");
+          
+            var salario = parseFloat(prompt("Qual é o salário do funcionário:")); 
+
+            var aumento = parseFloat(prompt("O salário será reajustado em qual porcentagem:"));
+
+            if (!isNaN(salario)) {
+                var aumento = salario (aumento/100);
+                var salario = salario + aumento;
+
+                var resultadoHTML = "O nome do funcionário é:" + funcionario + "<br>";
+                resultadoHTML += " Seu salário original: R$" + salario.toFixed(2) + "<br>";
+                resultadoHTML += "Com o aumento de (aumento/100): R$" + aumento.toFixed(2) + "<br>";
+                resultadoHTML += "Salário atual será de: R$" + salarioComAumento.toFixed(2);
+
+                document.getElementById("resultado").innerText = resultadoHTML;  
+
+            
+            } else {
+                alert("insira uma porcentagem válida")
+            }
+
+        } 
+
+    </script>
+</body>
+</html>
